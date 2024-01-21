@@ -1,0 +1,52 @@
+
+.information-user {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .row {
+    width: 100%;
+    display: flex;
+  }
+  
+  .user {
+    flex-basis: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .nav a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 16px;
+  }
+  .nav input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  .nav {
+    padding-bottom: 70px;
+  }
+
+img {
+    border-radius: 50%;
+    width: 97px;
+    height: 97px;
+    object-fit: cover;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhap 2 so a va b ( a < b ):</h1>
+    <p>a:<input id= "a" type="text" required></p>
+    <p>b:<input id= "b" type="text" required></p>
+    <button onclick="tongSNT()">Tinh tong cac so nguyen to</button>
+    <div id="announce"></div>
+    <div id="result"></div>
+    <script>
+        function tongSNT(){
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            if (a < b){
+                let sum = 0;
+                let arr = [];
+                for ( let i = a; i <= b; i++ ){
+                    if (soNguyenTo(i)){
+                        arr.push(i);
+                        sum += i;
+                    }
+                }
+                document.getElementById("announce").innerHTML = "Cac so ngto trong khoang a b: " + arr.join(",");
+                document.getElementById("result").innerHTML = "Tong so nguyen to trong khoang " + a + " va " + b + " la: " + sum;
+            }
+            else {
+                alert("doc lai de bai!");           
+            }
+        }
+        function soNguyenTo(num){
+            if (num<=1){
+                return false;
+            }
+            else{
+                for (let i = 2; i <= Math.sqrt(num); i++){
+                    if ( num % i === 0 ){
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
